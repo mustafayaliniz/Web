@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e293b, #111827);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Elemanları dikey hizala */
+    align-items: center;
+    justify-content: flex-start; /* Sayfanın yukarısından başla */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    margin-top: 30px;
+}
+
+header img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #a1a1aa;
+}
+
+/* Linklerin beyaz olmasını sağlamak için */
+a {
+    color: #dddddd;
+    text-decoration: none; /* Alt çizgiyi kaldırmak için */
+}
+
+a:hover {
+    color: #636363; /* Hover (fare ile üzerine gelince) rengi */
+}
+
+/* Navbar ayarları */
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #facc15;
+}
+
+/* Bölümleri Dikey Konumlandırma */
+section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    margin-top: 50px; /* Bölümler arasında daha fazla boşluk bırak */
+    width: 90%; /* Mobil uyumluluk için genişliği ayarla */
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bölüm kenarlık ekleme */
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* Takım Üyelerini Düzenleme */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Mobilde tek sütun */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member a {
+    color: #ddd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.team-member a:hover {
+    color: #facc15; /* Hover rengi */
+}
+
+.team-member p {
+    color: #a1a1aa;
+    font-size: 0.9rem;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        width: 100%;
+        margin-top: 20px; /* Mobilde bölümler arasındaki boşluğu azalt */
+    }
+
+    .team-members {
+        grid-template-columns: repeat(1, 1fr); /* Mobilde tek sütun */
+    }
+}
+
+/* Tablet Uyumluluğu - 641px ile 1023px arası */
+@media (min-width: 641px) and (max-width: 1023px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(2, 1fr); /* Tablet için iki sütun */
+    }
+}
+
+/* Desktop Uyumluluğu - 1024px ve üstü */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(4, 1fr); /* Desktop için dört sütun */
+    }
+}

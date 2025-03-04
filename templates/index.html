@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homo AI-sapiens</title>
+    <link rel="shortcut icon" href="static/images/logo.jpg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
+
+    <!-- Sayfa İçeriği -->
+    <main class="w-full flex flex-col items-center space-y-20 mt-20">
+
+        <!-- Başlık -->
+        <header class="text-center">
+            <img id="logo" src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Takım Logosu" class="w-48 mx-auto rounded-full">
+            <h1 class="text-4xl font-bold mt-4">Homo AI-sapiens</h1>
+            <p class="text-lg mt-2">Yapay zeka ve mühendisliği birleştiriyoruz.</p>
+        </header>
+
+        <section id="hakkimizda" class="p-6 bg-gray-800 rounded-lg shadow-lg max-w-3xl text-center">
+    <h2 class="text-3xl font-semibold">Hakkımızda</h2>
+    <p class="text-gray-400 mt-2">Biz, yapay zeka ve mühendislik çözümleri üreten bir ekibiz. Amacımız, teknolojiyi kullanarak yenilikçi projeler geliştirmek.</p>
+
+    <!-- Üyeleri Flexbox ile düzenleme -->
+    <div class="team-members mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="team-member">
+            <img src="https://github.com/mustafayaliniz.png" width="100px" alt="Mustafa Yalınız" class="rounded-full mx-auto">
+            <br />
+            <a href="https://github.com/mustafayaliniz" class="text-lg">Mustafa Yalınız</a>
+            <p>Takım Kaptanı</p>
+        </div>
+        <div class="team-member">
+            <img src="https://github.com/ekaar.png" width="100px" alt="Ekrem Özkaran" class="rounded-full mx-auto">
+            <br />
+            <a href="https://github.com/ekaar" class="text-lg">Ekrem Özkaran</a>
+            <p>Üye</p>
+        </div>
+        <div class="team-member">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQErasuoO2vz7Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1705857834874?e=1746057600&v=beta&t=ZbXyGuqBNbmlYcRPwUT7aVMLem0pRgkwfxoPAlAUIPQ" width="100px" alt="Mehmet Türe" class="rounded-full mx-auto">
+            <br />
+            <a href="https://github.com/mhmtture" class="text-lg">Mehmet Türe</a>
+            <p>Üye</p>
+        </div>
+        <div class="team-member">
+            <img src="https://github.com/sadikgolpekk.png" width="100px" alt="Sadık Gölpek" class="rounded-full mx-auto">
+            <br />
+            <a href="https://github.com/sadikgolpekk" class="text-lg">Sadık Gölpek</a>
+            <p>Üye</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- İletişim Bölümü -->
+        <section id="iletisim" class="p-6 bg-gray-800 rounded-lg shadow-lg max-w-3xl text-center">
+            <h2 class="text-3xl font-semibold">İletişim</h2>
+            <p class="text-gray-400 mt-2">Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+            <ul class="mt-4 space-y-2">
+                <li><strong>Email:</strong> info@takim.com</li>
+                <li><strong>Telefon:</strong> +90 555 849 41 00</li>
+                <li><strong>Adres:</strong> Kütahya, Türkiye</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+
+</body>
+</html>
